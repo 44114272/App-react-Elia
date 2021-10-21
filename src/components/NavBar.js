@@ -45,15 +45,3 @@ const NavBar = () => {
 }
 
 export default NavBar
-
-        // <div className='content-navbar'>
-        //     <div className='navbar'>
-        //         <h1>EliaBikes</h1>
-        //         <ul>
-        //             <li>Inicio</li>
-        //             <li>Catalogo</li>
-        //             <li>Nosotros</li>
-        //             <li>Contactanos</li>
-        //         </ul>
-        //     </div>
-        // </div>
