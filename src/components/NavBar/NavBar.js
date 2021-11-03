@@ -34,7 +34,7 @@ const NavBar = () => {
                                 <a className="nav-link" href="#">Contact us</a>
                             </li>
                         </ul>
-                        <form class="d-flex mx-lg-4">
+                        <form className="d-flex mx-lg-4">
                             <input className="form-control me-2 hola" type="search" placeholder="Search" aria-label="Search"/>
                             <button className="btn btn-outline-success " type="submit">Search</button>
                         </form>
