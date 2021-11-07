@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.card-container{
+    background-color: rgb(238, 238, 238);
+    width: 260px;
+    height: 340px;
+    margin: 25px 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.card-container:hover{
+    transition: all .28s ease;
+    box-shadow: 4px 4px 15px rgb(134, 134, 134);
+}
+.img-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+}
+.img-card img{
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+.card-description{
+    padding: 11px 0 15px 14px;
+}
+.card-description h3{
+    font-size: 30px;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(196, 8, 8),rgb(59, 4, 4));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.card-description p{
+    font-size: 14px;
+    font-weight: 400;
+}
+.price-button-cart{
+    display: flex;
+    justify-content: space-around;
+}
+.price-button-cart h4{
+    font-size: 24px;
+    font-weight: 400;
+    margin: 6px 25px 0 0;
+    color: rgb(100, 100, 100);
+}
+.price-button-cart button{
+    background: linear-gradient(to right, rgb(189, 9, 9),rgb(102, 13, 13));
+    border: none;
+    border-radius: 17px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    margin: 0 10px 0 13px;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+.price-button-cart button:hover{
+    background: linear-gradient(to right, rgb(216, 5, 5),rgb(122, 12, 12));
+}

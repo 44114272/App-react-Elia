@@ -1,12 +1,27 @@
 import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
+import {useState,useEffect} from 'react'
+import ItemList from '../ItemList/ItemList';
+import { getProducts } from '../Products/getProducts';
 
-function ItemListContainer({greetings,content}) {
+function ItemListContainer({}) {
+    const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        //llamada a la "api"
+        getProducts.then(res=>{
+            setProducts(res);//array de productos
+        })
+        .finally(()=>setLoading())
+    },[])
+
+
     return (
         <div className="item-list-container">
-            <h2>{greetings}</h2>
-            <h3>{content}</h3>
-            <ItemCount initial={1} stock={5} />
+            { loading ? <div className="spinner-border text-secondary mt-5" role="status">
+                            <span className="visually-hidden">Loading...</span>
+                        </div> : <ItemList products={products}/>
+            }
         </div>
     )
 }
