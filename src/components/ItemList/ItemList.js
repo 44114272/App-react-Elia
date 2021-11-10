@@ -5,7 +5,6 @@ const ItemList = ({products}) => {
     return (
         <div>
             {products.map(prod => <Item prod={prod}/>
-            
             )}
         </div>
     )

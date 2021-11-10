@@ -1,5 +1,4 @@
-import React from 'react'
-import {useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react';
 import ItemList from '../ItemList/ItemList';
 import { getProducts } from '../Products/getProducts';
 
@@ -20,7 +19,7 @@ function ItemListContainer({}) {
         <div className="item-list-container">
             { loading ? <div className="spinner-border text-secondary mt-5" role="status">
                             <span className="visually-hidden">Loading...</span>
-                        </div> : <ItemList products={products}/>
+                        </div> : <ItemList products={products} />
             }
         </div>
     )

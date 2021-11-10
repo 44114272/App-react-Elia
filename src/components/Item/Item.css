@@ -11,7 +11,7 @@
     cursor: pointer;
 }
 .card-container:hover{
-    transition: all .28s ease;
+    transition: all .23s ease;
     box-shadow: 4px 4px 15px rgb(134, 134, 134);
 }
 .img-card{
