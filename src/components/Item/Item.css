@@ -2,16 +2,20 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
+.link-cards{
+    text-decoration: none;
+}
 .card-container{
     background-color: rgb(238, 238, 238);
     width: 260px;
     height: 340px;
     margin: 25px 0;
     border-radius: 10px;
-    cursor: pointer;
+}
+.card-container-detail{
+    height: auto;
 }
 .card-container:hover{
-    transition: all .23s ease;
     box-shadow: 4px 4px 15px rgb(134, 134, 134);
 }
 .img-card{
@@ -23,7 +27,7 @@
 .img-card img{
     width: 240px;
     height: 240px;
-    object-fit: cover;
+    object-fit: contain;
 }
 .card-description{
     padding: 11px 0 15px 14px;
@@ -33,11 +37,17 @@
     font-weight: 600;
     background: linear-gradient(to right, rgb(196, 8, 8),rgb(59, 4, 4));
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    background-clip: text;
+}
+.count-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .card-description p{
     font-size: 14px;
     font-weight: 400;
+    color: rgb(56, 56, 56);
 }
 .price-button-cart{
     display: flex;

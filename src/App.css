@@ -6,9 +6,14 @@
   margin: 0 20px 0 5px;
   cursor: pointer;
 }
+.item-list{
+  column-gap: 50px; 
+  display: flex;
+  flex-wrap: wrap;
+}
 .item-list-container,.item-detail-container{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin: 27px;
   padding-top: 5px;
@@ -21,12 +26,13 @@
 /* ItemCount */
 .container-contador{
   background-color: rgb(43, 43, 43);
-  width: 120px;
+  width: 70px;
+  height: 31px;
+  margin: 4px 12px 6px 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 15px;
-  border-radius: 5px;
+  border-radius: 7px;
+  color: rgb(245, 245, 245);
 }
 .btn-suma,.btn-resta{
   cursor: pointer;
@@ -49,27 +55,4 @@
 }
 .contador{
   margin: 0 4px;
-}
-/* Btn añadir */
-.container-btn-add{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px 0;
-  background-color: rgb(138, 180, 53);
-  border-radius: 5px;
-  padding: 4px 8px;
-  color: #fff;
-  cursor: pointer;
-}
-.container-btn-add:hover{
-  background-color: rgb(148, 199, 46);
-  box-shadow: 4px 4px 12px rgba(65, 65, 65, .6);
-}
-.btn-add{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 20px;
-  border: none;
-  background: transparent;
-  color: #fff;
 }
