@@ -1,4 +1,5 @@
 import React from 'react'
+import Intercambiabilidad from '../Intercambiabilidad/Intercambiabilidad'
 import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({productDetail}) => {
@@ -16,7 +17,7 @@ const ItemDetail = ({productDetail}) => {
                                             <p>{prod.description}</p>
                                             <div className="price-button-cart">
                                                 <h4>{prod.price}</h4>
-                                                <button>Add to cart</button>
+                                                <Intercambiabilidad />
                                             </div>
                                         </div>
                                     </div>
