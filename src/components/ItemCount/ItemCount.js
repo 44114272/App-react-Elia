@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 
-const ItemCount = ({initial,stock})=> {
-    const [count,setCount] = useState(initial)
+const ItemCount = ({initial,stock,onAdd})=> {
+    const [items,setitems] = useState(initial)
 
     const itemSuma = ()=>{
-        if(count < stock){
-            setCount(count + 1)
+        if(items < stock){
+            setitems(items + 1)
         }
     }
     const itemResta = ()=>{
-        if(count > initial){
-            setCount(count - 1)
+        if(items > initial){
+            setitems(items - 1)
         }
     }
     
@@ -18,8 +18,11 @@ const ItemCount = ({initial,stock})=> {
         <div>
             <div className='container-contador'>
                 <button className='btn-suma' onClick={itemSuma}>+</button>
-                <label className='contador'>{count}</label>
+                <label className='contador'>{items}</label>
                 <button className='btn-resta' onClick={itemResta}>-</button>
+            </div>
+            <div>
+                <button onClick={onAdd(items)}>Add to cart</button>
             </div>
         </div>
     )

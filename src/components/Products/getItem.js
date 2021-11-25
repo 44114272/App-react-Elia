@@ -12,7 +12,7 @@ const productDetail = [
     stock:2,
     img:`${scott2}`,
     category: "mountain",
-    price:"$2500"
+    price: 2500 
 },
 {
     id:2,
@@ -21,7 +21,7 @@ const productDetail = [
     stock:2,
     img:`${scott3}`,
     category: "mountain",
-    price:"$2500"
+    price: 2500 
 },
 {
     id:3,
@@ -30,7 +30,7 @@ const productDetail = [
     stock:2,
     img:`${trekRoad}`,
     category: "road",
-    price:"$3000"
+    price: 3000
 },
 {
     id:4,
@@ -39,7 +39,7 @@ const productDetail = [
     stock:4,
     img:`${trekWomen}`,
     category: "womens",
-    price:"$800"
+    price: 800 
 },
 {
     id:5,
@@ -48,7 +48,7 @@ const productDetail = [
     stock:5,
     img:`${bikeGirl}`,
     category: "kids",
-    price:"$300"
+    price: 300 
 }]
 
 
