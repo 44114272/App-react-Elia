@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useCartContext } from '../CartContext/CartContext';
 import CartWidget from './CartWidget';
 
 const NavBar = () => {
+    const { quantityItem } = useCartContext();
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -33,11 +35,14 @@ const NavBar = () => {
                             </li>
                         </ul>
                         <form className="d-flex mx-lg-4">
-                            <input className="form-control me-2 hola" type="search" placeholder="Search" aria-label="Search"/>
+                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
                             <button className="btn btn-outline-success " type="submit">Search</button>
                         </form>
                     </div>
-                    <Link to='/cart'> <CartWidget /> </Link>
+                    <div className="d-flex text-light fs-5">
+                        <Link className="" to='/cart'> <CartWidget /> </Link>
+                        { quantityItem() !== 0 && quantityItem() }
+                    </div>
                 </div>
             </nav>
         </div>

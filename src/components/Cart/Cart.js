@@ -1,35 +1,35 @@
 import React from 'react';
 import { useCartContext } from '../CartContext/CartContext';
+import { Link } from 'react-router-dom';
+import './Cart.css';
 
 const Cart = ()=> {
-    const { cart, clearCart, removeItem } = useCartContext();
-    let total = 0;
-
-    const handleRemove = (itemID) => {
-        removeItem(itemID);
-    }
-
+    const { cart , clearCart, removeItem, totalPrice} = useCartContext();
+    console.log('cart', cart)
     return (
-            <>
-                <div className="cart-container">
-                    {cart.map(obj => <div className="cart-item">
-                    <img src={obj.item.img} alt={obj.item.name} />
-                    <div className="cart-item-midpart">
-                        <h1>{obj.item.name} x{obj.cant}</h1>
-                        <p>{obj.item.description}</p>
-                    </div>
-                    <div className="cart-item-rightpart">
-                        <h2>${obj.item.price}</h2>
-                        <button className="button" onClick={() => removeItem(obj.item.id, obj.cant)} >Eliminar del carrito</button>
-                    </div>
-                </div>)}
-                <div className="cart-bottom">
-                    {cart.map(obj => { total = obj.item.price * obj.cant + total })}
-                    <h1>Total: ${total}</h1>
-                    <button className="button" onClick={clearCart}>Vaciar carrito</button>
+        <>
+        
+                {
+                    <div className="container-cart"> { cart.length === 0 ? <div className="cart-vacio"><h1>Tu carrito esta vacio</h1> <Link to='/' ><p>Haz click aqui para ir a comprar algo</p></Link> </div> : 
+                        cart.map(obj => <div className="cart-items" key={obj.item[0].id}>
+                                            <img className="imgs-cart" src={obj.item[0].img} alt={obj.item[0].description} />
+                                            <div className="cart-description">
+                                                <h5>Nombre: {obj.item[0].title}</h5>
+                                                <h5>Cantidad: {obj.quantity}</h5>
+                                                <h5>Precio: ${ obj.item[0].price }</h5>
+                                                <div className="btn-remove-cart">
+                                                    <button className="btn btn-danger" onClick={() => removeItem()}>X</button>
+                                                </div>
+                                            </div>
+                                            <div className="holis">
+                                                <p>Total: ${obj.item[0].price * obj.quantity}</p>
+                                                <button className="btn btn-vaciar btn-danger" onClick={() => clearCart()}>Vaciar</button>
+                                            </div>     
+                                        </div>)}               
+                    
                 </div>
-            </div>
-            </>
+        }
+        </>
     );
 }
 export default Cart

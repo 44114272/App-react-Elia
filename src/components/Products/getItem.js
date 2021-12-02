@@ -12,7 +12,7 @@ const productDetail = [
     stock:2,
     img:`${scott2}`,
     category: "mountain",
-    price: 2500 
+    price: 2500
 },
 {
     id:2,

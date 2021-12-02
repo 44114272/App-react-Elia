@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import { getProducts } from '../Products/getProducts';
 
-function ItemListContainer({}) {
+function ItemListContainer() {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
 

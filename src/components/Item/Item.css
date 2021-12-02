@@ -30,6 +30,7 @@
     object-fit: contain;
 }
 .card-description{
+    position: relative;
     padding: 11px 0 15px 14px;
 }
 .card-description h3{
@@ -51,7 +52,7 @@
 }
 .price-button-cart{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .price-button-cart h4{
     font-size: 24px;
@@ -66,10 +67,16 @@
     font-size: 13px;
     font-weight: 400;
     color: #fff;
-    margin: 0 10px 0 13px;
+    margin: 0 7px 0 13px;
     padding: 10px 20px;
     letter-spacing: 1px;
 }
 .price-button-cart button:hover{
     background: linear-gradient(to right, rgb(216, 5, 5),rgb(122, 12, 12));
+}
+.btn-go-cart{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 0 10px 10px;
 }

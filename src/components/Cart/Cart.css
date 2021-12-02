@@ -1,0 +1,39 @@
+.cart-vacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.cart-items{
+    display: flex;
+    justify-content: space-evenly;
+    height: 130px;
+    border: 1px solid black;
+}
+.cart-description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-description h5{
+    margin-right: 25px;
+}
+.imgs-cart{
+    width: 170px;
+    height: 140px;
+    object-fit: contain;
+}
+.imgs-cart img{
+    width: 150px;
+    height: 130px;
+}
+.holis{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.holis p,.btn-vaciar{
+    margin-top: 2px;
+    font-size: 18px;
+}
