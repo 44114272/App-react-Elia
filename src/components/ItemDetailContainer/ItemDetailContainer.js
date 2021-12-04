@@ -1,20 +1,27 @@
 import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
+import { getFirestore } from '../../service/getFirestore';
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { getItem } from '../Products/getItem';
+// import { getItem } from '../Products/getItem';
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState([]);
     const [loading, setLoading] = useState(true);
-
     const {id} = useParams()
 
     useEffect(() => {
-        getItem.then(res=>{
-            setProductDetail(res.filter(prod => prod.id === parseInt(id)));
+        const db = getFirestore();
+        db.collection('items').doc(id).get()
+        .then(res => {
+            setProductDetail({ id: res.id, ...res.data() })
         })
-        .finally(()=>setLoading())
-    },[id]);
+        .finally(()=> setLoading(false))
+        // getItem.then(res=>{
+        //     setProductDetail(res.filter(prod => prod.id === parseInt(id)));
+        // })
+        // .finally(()=>setLoading())
+        // eslint-disable-next-line
+    },[]);
     
 
     return (

@@ -2,14 +2,14 @@ import scott2 from '../Imgs/BikeScott-2.png';
 import scott3 from '../Imgs/BikeScott-3.png';
 import trekWomen from '../Imgs/TrekWomen.png';
 import trekRoad from '../Imgs/TrekRoad.png';
-import bikeGirl from '../Imgs/BikeBoy.png'
+import bikeGirl from '../Imgs/BikeBoy.png';
 
 const products = [
 {
-    id:1,
+    id: 1,
     title:"Scott",
     description:"Scott Supercaliber 9.9 XTR MTB",
-    stock:3,
+    stock: 3,
     img:`${scott2}`,
     category: "mountain",
     price:"$2500"
