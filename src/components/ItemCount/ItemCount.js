@@ -12,7 +12,6 @@ const ItemCount = ({initial,stock,onAdd})=> {
             setitems(items - 1)
         }
     }
-    
     const handleOnAdd = () => {
         onAdd(items)
         setitems(initial)

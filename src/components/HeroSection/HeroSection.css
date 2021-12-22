@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+
+.container-hero{
+    position: relative;
+}
+.container-hero:before{
+    content: '';
+    position: absolute;
+    width: 55vw;
+    height: 70vh;
+    top: 0;
+    left: 0;
+    background: 
+    linear-gradient(to right,
+    rgba(22, 22, 22, 0.8),
+    rgba(0, 0, 0, 0.13));
+    background-blend-mode: soft-light;
+}
+.uno{
+    color: rgb(218, 216, 216);
+    font-family: 'Alfa Slab One', cursive;
+}
+.container-hero h1{
+    font-family: 'Alfa Slab One', cursive;
+    width: 400px;
+    margin: 100px 0 0 80px;
+    position: absolute;
+    color: rgb(233, 31, 31);
+}
+.img-hero{    
+    overflow-x: hidden;
+}
+.img-hero img{
+    width: 100vw;
+    height: 70vh;
+    object-fit: cover;
+}

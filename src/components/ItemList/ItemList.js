@@ -1,5 +1,5 @@
-import React, { memo } from 'react'
-import Item from '../Item/Item'
+import React, { memo } from 'react';
+import Item from '../Item/Item';
 
 const ItemList = memo(({products}) => {
     return (

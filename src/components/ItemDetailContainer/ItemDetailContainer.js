@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { getFirestore } from '../../service/getFirestore';
 import ItemDetail from '../ItemDetail/ItemDetail';
-// import { getItem } from '../Products/getItem';
 
 const ItemDetailContainer = () => {
     const [productDetail, setProductDetail] = useState([]);
@@ -16,10 +15,6 @@ const ItemDetailContainer = () => {
             setProductDetail({ id: res.id, ...res.data() })
         })
         .finally(()=> setLoading(false))
-        // getItem.then(res=>{
-        //     setProductDetail(res.filter(prod => prod.id === parseInt(id)));
-        // })
-        // .finally(()=>setLoading())
         // eslint-disable-next-line
     },[]);
     
