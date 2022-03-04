@@ -5,9 +5,10 @@ import CartWidget from './CartWidget';
 
 const NavBar = () => {
     const { quantityItem } = useCartContext();
+    
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div>
+    <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
                 <div className="container-fluid">
                     <Link to='/' className="navbar-brand fs-2 pb-2" >EliaBikes</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,20 +19,20 @@ const NavBar = () => {
                             <li className="nav-item">
                                 <Link to='/' className="nav-link active" aria-current="page">Home</Link>
                             </li>
-
                             <li className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <Link to='/' className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Catalogo
-                            </a>
+                            </Link>
                             <ul className="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
                                 <li><Link to='category/mountain' className="dropdown-item text-light">Mountain</Link></li>
                                 <li><Link to='category/road' className="dropdown-item text-light">Road</Link></li>
                                 <li><Link to='category/kids' className="dropdown-item text-light">Kids</Link></li>
                                 <li><Link to='category/womens' className="dropdown-item text-light">Women's</Link></li>
+                                <li><Link to='category/accesory' className="dropdown-item text-light">Accesories</Link></li>
                             </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contact us</a>
+                                <Link to='/' className="nav-link">Contact us</Link>
                             </li>
                         </ul>
                         <form className="d-flex mx-lg-4">
