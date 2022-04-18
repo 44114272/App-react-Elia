@@ -1,53 +1,74 @@
-import React from 'react'
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import MenuItems from './MenuItems';
+import { HiOutlineMenuAlt1 } from 'react-icons/hi';
+import { CgClose } from 'react-icons/cg';
 import { useCartContext } from '../CartContext/CartContext';
 import CartWidget from './CartWidget';
+import { UseClickOutside } from './UseClickOutside';
+import { motion } from 'framer-motion';
+import './NavBar.css';
 
 const NavBar = () => {
+    const [menuClick, setMenuClick] = useState(false);
+    const handleClick = () => setMenuClick(!menuClick);
+    const closeMobileMenu = () => setMenuClick(false);
     const { quantityItem } = useCartContext();
-    
+    const ref = useRef(null);
+    UseClickOutside(ref, () => closeMobileMenu(true));
+
     return (
-    <div>
-    <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-                <div className="container-fluid">
-                    <Link to='/' className="navbar-brand fs-2 pb-2" >EliaBikes</Link>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <Link to='/' className="nav-link active" aria-current="page">Home</Link>
-                            </li>
-                            <li className="nav-item dropdown">
-                            <Link to='/' className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Catalogo
-                            </Link>
-                            <ul className="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                                <li><Link to='category/mountain' className="dropdown-item text-light">Mountain</Link></li>
-                                <li><Link to='category/road' className="dropdown-item text-light">Road</Link></li>
-                                <li><Link to='category/kids' className="dropdown-item text-light">Kids</Link></li>
-                                <li><Link to='category/womens' className="dropdown-item text-light">Women's</Link></li>
-                                <li><Link to='category/accesory' className="dropdown-item text-light">Accesories</Link></li>
-                            </ul>
-                            </li>
-                            <li className="nav-item">
-                                <Link to='/' className="nav-link">Contact us</Link>
-                            </li>
-                        </ul>
-                        <form className="d-flex mx-lg-4">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button className="btn btn-outline-success " type="submit">Search</button>
-                        </form>
-                    </div>
-                    <div className="d-flex text-light fs-5">
-                        <Link className="" to='/cart'> <CartWidget /> </Link>
-                        { quantityItem() !== 0 && quantityItem() }
-                    </div>
-                </div>
+        <>
+            <nav ref={ref} className='navbar-container'>
+                <motion.h1 
+                 className='navbar-logo' 
+                 onClick={closeMobileMenu}
+                 initial={{y: -80, opacity: 0}}
+                 animate={{y: 0, opacity: 1}}
+                 transition={{ duration: .4, type:'tween'}}
+                >
+                 <Link className='logo-link' to='/'>EliaBikes</Link>
+                </motion.h1>
+                <motion.div 
+                 className='menu-icon' 
+                 onClick={handleClick}
+                 initial={{y: -80,opacity: 0}}
+                 animate={{y: 0,opacity: 1}}
+                 transition={{delay: .4, duration: 1.2, type:'spring', stiffness: 70}}
+                >
+                 {menuClick ? <CgClose /> : <HiOutlineMenuAlt1 />}
+                </motion.div>
+                <ul className={menuClick ? 'nav-menu active' : 'nav-menu'}>
+                    {MenuItems.map((item,index)=>{
+                        return (
+                            <motion.li 
+                             key={index}
+                             initial={{y: -80,opacity: 0}}
+                             animate={{y: 0,opacity: 1}}
+                             transition={{delay: index * .2, duration: 1, type:'spring', stiffness: 70}}
+                            >
+                                <Link 
+                                 className={item.cName}
+                                 to={item.url} 
+                                 onClick={closeMobileMenu}
+                                >
+                                 {item.title}
+                                </Link>
+                            </motion.li>
+                        )
+                    })}
+                </ul>
+                <motion.div
+                 className='cart-container'
+                 initial={{y: -80,opacity: 0}}
+                 animate={{y: 0,opacity: 1}}
+                 transition={{delay: .4, duration: 1.2, type:'spring', stiffness: 70}} 
+                >
+                 <Link to='/cart' onClick={closeMobileMenu}> <CartWidget /> </Link>
+                 { quantityItem() !== 0 && quantityItem() }
+                </motion.div>
             </nav>
-        </div>
+        </>
     )
 }
-
 export default NavBar

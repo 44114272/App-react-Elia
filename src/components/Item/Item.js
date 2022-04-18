@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import './Item.css';
 
@@ -10,7 +9,9 @@ const Item = ({prod}) => {
                             <img src={prod.img} alt={prod.description}/>
                         </div>
                         <div className="card-description">
-                            <h3>{prod.title}</h3>
+                            <div>
+                                <h3>{prod.title}</h3>
+                            </div>
                             <p>{prod.description}</p>
                             <div className="price-button-cart">
                                 <h4>$ {prod.price}</h4>

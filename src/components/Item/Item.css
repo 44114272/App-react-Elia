@@ -1,34 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
 *{
     font-family: 'Poppins', sans-serif;
+}
+.item-list{
+    column-gap: 25px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.item-list-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.item-list-container .spinner-load{
+    margin: 20vh auto;
 }
 .link-cards{
     text-decoration: none;
 }
 .card-container{
-    background-color: rgb(223, 219, 219);
+    background-color: rgb(201, 201, 201);
     width: 260px;
-    height: 370px;
+    height: 378px;
     margin: 25px 0;
     border-radius: 10px;
 }
 .card-container:hover{
-    box-shadow: 4px 4px 15px rgb(134, 134, 134);
+    box-shadow: 6px 6px 20px rgba(109, 109, 109, 0.753);
 }
 .img-card{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 220px;
+    height: 235px;
 }
 .img-card img{
     width: 240px;
     height: 235px;
     object-fit: contain;
+    overflow: hidden;
 }
 .card-description{
-    position: relative;
     padding: 11px 0 15px 14px;
+}
+.card-description div{
+    display: flex;
 }
 .card-description h3{
     font-size: 30px;
@@ -70,10 +87,4 @@
 }
 .price-button-cart button:hover{
     background: linear-gradient(to right, rgb(216, 5, 5),rgb(122, 12, 12));
-}
-.btn-go-cart{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin: 0 0 10px 10px;
 }

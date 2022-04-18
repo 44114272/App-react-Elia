@@ -1,15 +1,14 @@
-import React from 'react'
-import HeroSection from '../HeroSection/HeroSection'
-import ItemListContainer from '../ItemListContainer/ItemListContainer'
+import CategoriesSlider from '../CategoriesSlider/CategoriesSlider';
+import { SliderData } from '../CategoriesSlider/SliderData';
+import HeroSection from '../HeroSection/HeroSection';
+import PruebaFirestore from '../BestProducts/BestProducts';
 
 const Home = () => {
     return (
         <div>
             <HeroSection />
-            <ItemListContainer />
-            <footer>
-                <h4>© Todos los derechos reservados a EliaBikes</h4>
-            </footer>
+            <CategoriesSlider slides={SliderData}/>
+            <PruebaFirestore />
         </div>
     )
 }

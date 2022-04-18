@@ -1,0 +1,221 @@
+.slider{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../Imgs/bg-slider.jpg) 40% 50% no-repeat;
+    margin-bottom: 0;
+}
+.image{
+    height: 460px;
+    width: 60vw;
+    object-fit: cover;
+}
+.right-arrow{
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    height: 60px;
+    width: 58px;
+}
+.left-arrow{
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    font-size: 3rem;
+    cursor: pointer;
+    user-select: none;
+    color: #fff;
+    height: 60px;
+    width: 58px;
+}
+.right-arrow:hover,.left-arrow:hover{
+    background-color: rgb(253, 246, 246);
+    font-size: 3rem;
+    top: 50%;
+    color: black;
+    text-align: center;
+    transition: .2s color ease-in-out;
+}
+.slider-title-container{
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2.7rem;
+    color: #fff;
+}
+.slider-title{
+    position: absolute;
+    color: rgb(218, 228, 236);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    top: 45.5vh;
+    margin-left: 18px;
+    width: 60%;
+    font-size: 80px;
+    font-weight: 700;
+}
+.road,.mountain{
+    margin-left: 14px;   
+}
+@media screen and (max-width: 850px) {
+    .image{
+        height: 400px;
+        width: 70vw;
+    }
+    .slider-title{
+        top: 46vh;
+        width: 70%;
+    }
+    .right-arrow{
+        top: 50%;
+        right: 20px;
+    }
+    .left-arrow{
+        top: 50%;
+        left: 20px;
+    }
+}
+@media screen and (max-width: 730px){
+    .image{
+        height: 370px;
+        width: 80vw;
+    }
+    .slider-title{
+        top: 47.5vh;
+        width: 81%;
+    }
+    .right-arrow{
+        top: 52%;
+        right: 5px;
+        font-size: 2.3rem;
+        height: 50px;
+        width: 47px;      
+    }
+    .left-arrow{
+        top: 52%;
+        left: 5px;
+        font-size: 2.3rem;
+        height: 50px;
+        width: 47px;
+    }
+    .right-arrow:hover,.left-arrow:hover{
+        top: 52%;
+        font-size: 2.3rem;
+        height: 50px;
+        width: 47px;
+    }
+}
+@media screen and (max-width: 600px){
+    .slider{
+        width: 100%;
+    }
+    .image{
+        height: 320px;
+        width: 70vw;
+        flex-wrap: nowrap;
+    }
+    .slider-title{
+        font-size: 60px;
+        top: 49vh;
+        width: 68%;
+        left: 13vw;
+    }
+}
+@media screen and (max-width: 546px){
+    .slider{
+        height: 80vh;
+    }
+    .image{
+        height: 320px;
+        width: 400px;
+    }
+    .slider-title{
+        width: auto;
+        font-size: 50px;
+        height: 55px;
+        background-color: rgba(148, 7, 7, 0.746);
+        margin-top: 86px;
+        padding: 0 5px;
+    }
+    .road{
+        width: 45%;
+        margin-left: 15.5%;
+    }
+    .mountain{
+        width: 40%;
+        margin-left: 18%;
+    }
+    .kids{
+        width: 53%;
+        margin-left: 10.9%;
+    }
+    .womens{
+        width: 74%;
+        margin-left: 1%;
+        font-size: 43px;
+    }
+    .accesory{
+        margin: 84px 0 0 1%;
+        width: 73%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 41px;
+    }
+    .slider-title-container{
+        font-size: 25px;
+        margin-left: 3px;
+        top: -2rem;
+    }
+    .left-arrow,.right-arrow{
+        z-index: 700;
+    }
+}
+@media screen and (max-height: 560px) and (orientation: landscape){
+    .slider{
+        height: 130vh;
+        background-color: #fff;
+    }
+    .image{
+        height: 370px;
+        width: 75vw;
+    }
+    .slider-title-container{
+        font-size: 37px;
+    }
+    .slider-title{
+        top: 55vh;
+    }
+    .road{
+        width: 45%;
+        margin-left: 15.5%;
+        
+    }
+    .mountain{
+        width: 40%;
+        margin-left: 18%;     
+    }
+    .kids{
+        width: 53%;
+        margin-left: 10.9%;
+    }
+    .womens{
+        width: 74%;
+        margin-left: 2%;
+    }
+    .accesory{
+        margin-left: 3%;
+        width: 73%;
+    }
+}

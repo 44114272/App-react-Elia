@@ -1,0 +1,220 @@
+.item-detail-container{
+    display: flex;
+}
+.item-detail-container .spinner-load{
+    margin: 25vh auto;
+}
+.container-detail{
+    display: flex;
+    min-height: 70vh;
+    margin-bottom: 30px;
+}
+.container-img-detail{
+    margin: 0 10px 0 50px;
+    position: relative;
+}
+.img-detail,.tshirt{
+    width: 40vw;
+    height: 450px;
+    margin: 40px 15px 0 20px;
+    object-fit: contain;
+}
+.tshirt{
+    margin-top: 70px;
+    height: 400px;
+}
+.magnifier{
+    position: absolute;
+    /* prevent magnifier blocks the mousemove event of img */
+    pointer-events: none;
+    /* reduce opacity so you can verify position */
+    opacity: 1;
+    border: 1px solid #ff8800;
+    background: #fff no-repeat ;
+}
+.container-description{
+    position: relative;
+    display: flex;
+}
+.description-detail{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0 0 20px;
+}
+.title-stock{
+    display: flex;
+}
+.title-stock .in-stock, .sold-out{
+    margin: 11px 0 0 22px;
+    font-size: 16px;
+}
+.title-stock .in-stock{
+     color: #009648;
+}
+.title-stock .sold-out{
+    color: rgb(202, 19, 56);
+}
+.title-product-detail{
+    font-size: 35px;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(196, 8, 8),rgb(59, 4, 4));
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.description-detail p{
+    font-size: 19px;
+    color: rgb(56, 56, 56);
+    padding-top: 15px;
+}
+.price-itemcount{
+    margin-top: 15px; 
+}
+.price-itemcount .price-installments{
+    display: flex;
+}
+.price-itemcount h4{
+    font-size: 28px;
+    font-weight: 600;
+    color: rgb(73, 73, 73);
+    width: 120px;
+}
+.price-itemcount h5{
+    font-size: 17px;
+    color: #009648;
+    padding: 4px 0 0 20px;
+}
+.button-cart-detail{
+    margin-top: 25px;
+}
+.button-cart-detail .go-to-cart, .btn-add{
+    background: linear-gradient(to right, rgb(189, 9, 9),rgb(102, 13, 13));
+    border: none;
+    border-radius: 17px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px 20px;
+    letter-spacing: 1px;
+}
+.button-cart-detail .go-to-cart:hover,.btn-add:hover{
+    background: linear-gradient(to right, rgb(216, 5, 5),rgb(122, 12, 12));
+}
+.go-to-cart{
+    margin-top: 10px;
+}
+.extra-details{
+    margin: 130px 10px 0 60px;
+}
+.extra-details h6{
+    font-size: 17px;
+    color: #009648;
+    padding-top: 10px;
+}
+.refund{
+    font-size: 21px;
+}
+.extra-details p{
+    font-size: 14px;
+    color: rgb(133, 132, 132);
+    margin: 0;
+}
+@media screen and (max-width: 1078px){
+    .container-img-detail{
+        margin: 55px 5px 0 12px;
+    }
+    .description-detail{
+        margin-left: 20px;
+    }
+    .extra-details{
+        margin: 120px 10px 0 25px;
+    }
+}
+@media screen and (max-width: 963px){
+    .container-detail{
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .container-img-detail{
+        margin: -50px 0;
+    }
+    .container-img-detail .img-detail{
+        width: 95vw;
+        height: 500px;
+        object-fit: contain;
+    }
+    .tshirt{
+        margin: 50px;
+        width: 95vw;
+        height: 370px;
+    }
+    .container-description{
+        flex-direction: row;
+    }
+    .description-detail{
+        margin: 20px 0 0 40px;
+        flex-direction: column;        
+    }
+    .extra-details{
+        margin: 0 2px 0 35px;
+    }
+}
+@media screen and (max-width: 599px){
+    .item-detail-container{
+        display: block;
+    }
+    .item-detail-container .spinner-load{
+        display: flex;
+    }
+    .magnifier{
+        display: none;
+    }
+    .container-description{
+        flex-direction: column;
+    }
+    .img-detail{
+        margin: -90px 5px 0 5px;
+    }
+    .tshirt{
+        margin: 5px;
+        padding-bottom: 20px;
+        height: 350px;
+    }
+    .description-detail{
+        margin: -110px 0 0 30px;
+        position: relative;
+    }
+    .extra-details{
+        margin: 40px 2px 60px 30px;
+    }
+}
+@media screen and (max-width: 963px) and (orientation: portrait){
+    .container-img-detail{
+        margin: 10px 0 170px 0;
+        width: 95vw;
+        height: 300px;
+    }
+    .img-detail{
+        width: 95vw;
+        height: 300px;
+    }
+    .magnifier{
+        display: none;
+    }
+}
+@media screen and (max-height: 720px) and (orientation: landscape){
+    .item-detail-container{
+        display: block;
+    }
+    .item-detail-container .spinner-load{
+        display: flex;
+    }
+    .container-img-detail{
+        margin: -30px 0 30px 0;
+    }
+}
+@media screen and (min-height: 780px) and (orientation: portrait){
+    .img-detail{
+        margin: -85px 0 0 10px;
+    }
+}

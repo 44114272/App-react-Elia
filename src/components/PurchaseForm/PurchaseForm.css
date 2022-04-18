@@ -1,0 +1,30 @@
+.form-purchase{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.form-purchase label{
+  margin: 7px 0;  
+}
+.form-purchase input{
+  width: 60%;
+  padding: 3px;
+}
+.form-purchase button{
+  margin-top: 15px;
+}
+.input-error{
+  color: rgb(226, 11, 11);
+  font-size: 15px;
+}
+.submitted-form{
+  margin-top: 13px;
+}
+.submitted-form small{
+  color: rgb(34, 214, 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}

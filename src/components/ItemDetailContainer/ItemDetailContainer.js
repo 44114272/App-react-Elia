@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { getFirestore } from '../../service/getFirestore';
 import ItemDetail from '../ItemDetail/ItemDetail';
@@ -21,7 +21,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='item-detail-container'>
-            { loading ? <div className="spinner-border text-secondary mt-5" role="status">
+            { loading ? <div className="spinner-border text-secondary spinner-load" role="status">
                                 <span className="visually-hidden">Loading...</span>
                             </div> : <ItemDetail productDetail={productDetail}/>
             }

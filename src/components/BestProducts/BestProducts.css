@@ -1,0 +1,101 @@
+.opa{
+    background-color: rgb(241, 241, 241);
+    width: 100%;
+}
+.title-best-products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 100px;
+    color: rgb(0, 0, 0);
+    height: 150px;
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.container-best-products{
+    display: flex;
+    margin-bottom: 60px;
+}
+.best-img{
+    width: 40vw;
+    height: 450px;
+    object-fit: contain;
+}
+.best-brand, .best-desc, .link{
+    margin-left: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+.best-brand{
+    margin-top: -45px;
+    font-size: 34px;
+}
+.best-desc{
+    font-size: 15px;
+    margin-top: 15px;
+    width: 35vw;
+}
+.link{
+   text-decoration: none; 
+}
+.container-best-products button{
+    all: unset;
+    background-color: rgb(25, 21, 21);
+    width: 155px;
+    height: 48px;
+    margin-top: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 18px;
+    color: rgb(231, 229, 229);
+    cursor: pointer;
+    border-radius: 10px;
+}
+.container-best-products button:hover{
+    background-color: rgb(6, 5, 5);
+}
+@media screen and (max-width: 960px){
+    .best-img{
+        width: 330px;
+        height: 330px;
+        margin-left: 40px;
+    }
+    .best-brand{
+        margin-top: -10px;
+    }
+}
+@media screen and (max-width: 757px){
+    .container-best-products{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    .best-img{
+        width: 95vw;
+        height: 400px;
+        margin-left: 0;
+    }
+    .best-brand, .best-desc, .link{
+        width: 80%;
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 506px){
+    .title-best-products{
+        height: 170px;
+        font-size: 80px;
+    }
+    .best-img{
+        width: 90vw;
+        height: 330px;
+        margin-left: 20px;
+        overflow: hidden;
+    }
+    .best-brand, .best-desc, .link{
+        width: 80%;
+        margin-left: 30px;
+    }
+    .best-brand{
+        margin-top: initial;
+        font-size: 37px;
+    }
+}

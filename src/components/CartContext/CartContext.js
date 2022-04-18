@@ -21,7 +21,7 @@ const CartProvider = ({children}) => {
     } 
 
     function removeItem(itemID, quantity) {
-        setCart(cart.filter(item => item.id !== itemID));
+        setCart(cart.filter(item => item.item.id !== itemID));
         setQuantItems(quantItems - quantity)
     }
     const quantityItem = () =>{

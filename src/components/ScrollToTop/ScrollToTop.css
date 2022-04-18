@@ -1,0 +1,25 @@
+.scroll-top{
+    background-color: rgb(29, 29, 29);
+    border-radius: 30%;
+    position: fixed;
+    height: 4rem;
+    width: 3rem;
+    bottom: 40px;
+    right: 40px;
+    z-index: 800;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(225, 225, 225);
+    font-size: 2em;
+}
+.scroll-top:hover{
+    background-color: rgb(57, 57, 57);
+}
+@media screen and (max-width: 546px){
+    .scroll-top{
+        bottom: 35px;
+        right: 15px;
+    }
+}
