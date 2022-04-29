@@ -1,14 +1,14 @@
 # **EliaBikes**
 ### [Ver Demo](https://eliabikes.netlify.app/ "## Ver Demo")
-## **Proyecto eccomerce hecho en react para coderhouse. Desarrolado por Joaquin Elia**
+## **Proyecto eccomerce hecho en react para coderhouse. Desarrollado por Joaquin Elia**
 Esta tienda online se enfoca en ayudar a los ciclistas o cualquier persona interesada en adquirir una bicicleta, a elegir el mejor equipamiento para poder disfrutar de este deporte.
 
 ### Funcionalidades:
-- **NavBar** con **DropDown** que permite navegar por las diferentes secciones y categorias de la pagina.
-- **Carrito** al cual se puede acceder desde cualquier parte de la aplicación, cuenta con la funcionalidades de **agregar productos y generar ordenes de compra**.
-- **Formulario** con **validaciones** para hacer un pedido y **enviar datos personales** que son almacenanados en firebase. Al apretar en enviár aparece el numero de orden que es unico para cada compra.
+- **NavBar** que permite navegar por las diferentes secciones de la pagina.
+- **Carrito** al cual se puede acceder desde cualquier parte de la aplicación, cuenta con la funcionalidad de **agregar productos**.
+- **Login y registro de usuarios** con **Firebase-auth** que también tiene la opción de registrarse con **Google**. Realiza **validaciones**, cuenta con la opción de **recuperar** contraseña y **envia los datos** del usuario con su compra a firebase donde estos quedan almacenados. Al apretar en enviár aparece numero de orden, el precio total y la cantidad de productos.
 - **Listado** de todos los Items disponibles con** categorías**.
-- Proximamente contara con Log in, pasarela de pago y wish list.
+- **Slider** que al hacer click sobre cada imagen te lleva hacia la categoria correspondiente.
 
 ###  Dependencias Utilizadas
 | Dependencias  | Versión  | Uso |
