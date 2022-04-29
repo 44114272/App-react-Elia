@@ -1,0 +1,85 @@
+.finish-purchase{
+    width: 60vw;
+    height: 87vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+.finish-purchase img{
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    margin: 30px 0;
+}
+.finish-purchase > h3{
+    font-size: 28px;
+    font-weight: 700;
+}
+.finish-purchase > h4{
+    font-size: 22px;
+    font-weight: 400;
+    margin-top: 10px;
+    color: rgb(10, 176, 1);
+}
+.finish-purchase > p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 17px;
+    width: 80%;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(172, 172, 172);
+}
+.finish-purchase > small{
+    margin-top: 10px;
+    font-weight: 400;
+}
+.finish-purchase small > span{
+    font-size: 17px;
+    font-weight: 700;
+    color: rgb(10, 176, 1);
+}
+.finish-purchase .btn-send{
+    margin: 15px;
+}
+@media screen and (max-width: 974px) {
+    .finish-purchase{
+        width: 90vw;
+    }
+}
+@media screen and (max-width: 510px) {
+    .finish-purchase{
+        width: 95vw;
+        height: 95vh;
+    }
+    .finish-purchase img{
+        width: 150px;
+        height: 150px;
+        margin: 30px 0 10px 0;
+    }
+    .finish-purchase > h3{
+        font-size: 25px;
+    }
+    .finish-purchase > h4{
+        font-size: 20px;
+        margin-top: 7px;
+    }
+    .finish-purchase > p{
+        font-size: 16px;
+        margin-top: 13px;
+        padding-bottom: 18px;
+    }
+    .finish-purchase > small{
+        margin-top: 5px;
+    }
+    .finish-purchase small > span{
+        font-size: 16px;
+    }
+    .finish-purchase .btn-send{
+        margin: 10px 0;
+    }
+}

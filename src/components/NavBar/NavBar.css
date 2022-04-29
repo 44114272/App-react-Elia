@@ -49,6 +49,13 @@
     display: none;
     color: #fff;
 }
+.cart-widget{
+    font-size: 25px;
+    color: #fff;
+}
+.cart-widget:hover{
+    color: #fff;
+}
 @media screen and (max-width: 960px) {
     .navbar-container{
         height: 65px;

@@ -2,6 +2,7 @@ import {useState,useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import { getFirestore} from '../../service/getFirestore';
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation';
 
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
@@ -12,7 +13,7 @@ function ItemListContainer() {
         const db = getFirestore(); //conexion con firestore
         const dbQuery = categoryID 
             ? 
-        db.collection('items', '').where('category', '==', categoryID)
+        db.collection('items').where('category', '==', categoryID)
             : 
         db.collection('items')
 
@@ -23,9 +24,7 @@ function ItemListContainer() {
 
     return (
         <div className="item-list-container">
-                { loading ? <div className="spinner-border text-secondary spinner-load" role="status">
-                                <span className="visually-hidden">Loading...</span>
-                            </div> : <ItemList  products={products} />
+                { loading ? <LoadingAnimation /> : <ItemList  products={products} />
                 }
         </div>
     )

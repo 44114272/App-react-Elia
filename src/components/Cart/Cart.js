@@ -1,16 +1,17 @@
 import { memo, useState } from 'react';
 import { useCartContext } from '../CartContext/CartContext';
+import { useAuth } from "../../context/authContext";
 import { Link } from 'react-router-dom';
 import ModalPurchase from '../PurchaseForm/PurchaseForm';
-import {motion} from 'framer-motion';
-import './Cart.css';
+import { motion } from 'framer-motion';
 import ModalReutilizable from '../ModalReutilizable/ModalReutilizable';
+import './Cart.css';
 
 const Cart = memo(()=> {
-    const [modalAppear, setModalAppear] = useState(false);
     const [modalState, setModalState] = useState(false);
-
+    
     const { cart , clearCart, removeItem, totalPrice} = useCartContext();
+    const {user} = useAuth()
     
     return (
         <div className="container-cart">
@@ -30,46 +31,58 @@ const Cart = memo(()=> {
                                         <h5>Cantidad: {obj.quantity}</h5>
                                         <h5>S/total: ${obj.item.price * obj.quantity}</h5>
                                     </div>
-                                    <div className="btn-remove-cart mt-5">
-                                            <button 
-                                             className="btn btn-danger mb-5" 
-                                             onClick={() => removeItem(obj.item.id)}
-                                            >
-                                             X
-                                            </button>
+                                    <div>
+                                        <button 
+                                         className="btn-remove-one" 
+                                         onClick={() => removeItem(obj.item.id)}
+                                        >
+                                         X
+                                        </button>
                                     </div>   
                                 </motion.div>)}
                                 <div className='total-purchase'>
-                                    <>
-                                        <p>Total: ${totalPrice()}</p>
-                                        <button 
-                                         className="btn btn-clear btn-danger" 
-                                         onClick={() => clearCart()}
-                                        >
-                                         Vaciar
-                                        </button>
-                                    </>
+                                    <p>Total: ${totalPrice()}</p>
                                     <button 
-                                     className="btn btn-secondary" 
+                                     className="btn-clear-cart" 
+                                     onClick={() => clearCart()}
+                                    >
+                                     Vaciar
+                                    </button>
+                                    <button 
+                                     className="btn-purchase" 
                                      onClick={()=> setModalState(!modalState)}
                                     >
                                      Comprar
                                     </button>
                                     <ModalReutilizable 
                                      state={modalState} 
-                                     changeState={setModalState}>
-                                         <ModalPurchase />
-                                     </ModalReutilizable>
-                                    {/* <button 
-                                     className="btn btn-secondary" 
-                                     onClick={()=> setModalAppear(true)}
+                                     changeState={setModalState}
                                     >
-                                     Comprar
-                                    </button>
-                                    <ModalPurchase 
-                                    show={modalAppear} 
-                                    onHide={()=> setModalAppear(false)} 
-                                    /> */}
+                                     {!user &&
+                                     <div className='confirm-login-register'>
+                                        <p>Para finalizar la compra debes registrarte:</p>
+                                        <Link 
+                                         to='/register'
+                                         className=''
+                                        >
+                                         <button className='btn-send'>Registrate</button>
+                                        </Link>
+                                        <p>O si ya te registraste incia sesion:</p>
+                                        <Link 
+                                         to='/login'
+                                         className=''
+                                        >
+                                         <button className='btn-send'>Inicar sesión</button>
+                                        </Link>
+                                     </div>
+                                    }
+                                    {user &&
+                                        <div className='confirm-purchase'>
+                                            <p>Esta seguro que desea comprar los productos de su carrito?</p>
+                                            <ModalPurchase />
+                                        </div>
+                                    }
+                                     </ModalReutilizable>
                                 </div>
                 </div>}             
         </div>

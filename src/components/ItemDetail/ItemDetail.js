@@ -1,4 +1,4 @@
-import { useState, memo } from 'react'
+import { useState } from 'react'
 import { useCartContext } from '../CartContext/CartContext';
 import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
@@ -13,7 +13,7 @@ import bbva from '../Imgs/bbva.svg';
 import ModalReutilizable from '../ModalReutilizable/ModalReutilizable';
 import './ItemDetail.css'
 
-const ItemDetail = memo(({ productDetail })=> {
+const ItemDetail = ({ productDetail })=> {
     const [clicked, setclicked] = useState(false);
     const [modalState1, setModalState1] = useState(false);
     const [modalState2, setModalState2] = useState(false);
@@ -37,6 +37,7 @@ const ItemDetail = memo(({ productDetail })=> {
                      productDetail.cName : 
                      'img-detail'}
                      src={productDetail.img}
+                     alt={productDetail.description}
                      onClick={()=> setModalState1(!modalState1)}
                      onMouseEnter={(e) => {
                         // update image size and turn-on magnifier
@@ -59,7 +60,6 @@ const ItemDetail = memo(({ productDetail })=> {
                         // close magnifier
                         setShowMagnifier(false);
                       }}
-                     alt={productDetail.description}
                     />
                     <div
                     className='magnifier'
@@ -126,7 +126,9 @@ const ItemDetail = memo(({ productDetail })=> {
                      src={productDetail.img}
                      className={productDetail.cName ? 
                         'modal-img-large' : 
-                        'modal-img'}
+                        'modal-img'
+                     }
+                     alt={productDetail.description}
                     />
                 </div>
             </ModalReutilizable>
@@ -140,19 +142,19 @@ const ItemDetail = memo(({ productDetail })=> {
                 <div className='content-modal-payments'>
                     <div className='credit-cards'>
                         <h6>Tarjetas de crédito</h6>
-                        <img src={santander}/>
-                        <img src={hsbc}/>
-                        <img src={bbva}/>
+                        <img src={santander} alt='Tarjeta banco Santander'/>
+                        <img src={hsbc} alt='Tarjeta banco HSBC'/>
+                        <img src={bbva} alt='Tarjeta banco BBVA'/>
                     </div>
                     <div className='debit-cards'>
                         <h6>Tarjetas de débito</h6> 
-                        <img src={visa}/>                      
-                        <img src={mastercard}/>                      
-                        <img src={maestro}/>                      
+                        <img src={visa} alt='Tarjeta Visa'/>                      
+                        <img src={mastercard} alt='Tarjeta Mastercard'/>                      
+                        <img src={maestro} alt='Tarjeta Mestro'/>                      
                     </div>
                 </div>
             </ModalReutilizable>
         </div>
     );
-})
+}
 export default ItemDetail

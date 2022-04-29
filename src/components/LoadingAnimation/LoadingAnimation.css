@@ -1,0 +1,45 @@
+.container-loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100vw;
+    height: 50vh;
+}
+.container-loader svg{
+    position: relative;
+    width: 110px;
+    height: 110px;
+    animation: rotate 1.5s linear infinite;  
+}
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container-loader svg circle{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke-width: 10;
+    stroke: #c40808;
+    stroke-linecap: round;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    animation: animate 4s linear infinite;   
+}
+@keyframes animate {
+    0%,100% {
+        stroke-dashoffset: 440;
+    }
+    50%{
+        stroke-dashoffset: 0;
+    }
+    50.1%{
+        stroke-dashoffset: 880;
+    }
+}

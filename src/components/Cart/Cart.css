@@ -1,7 +1,8 @@
 .container-cart{
     background-color: rgb(60, 60, 60);
-    min-height: 60vh;
+    min-height: calc(100vh - 70px);
     padding-top: 10px;
+    overflow-x: hidden;
 }
 .cart-vacio{
     display: flex;
@@ -50,6 +51,19 @@
 .cart-items .tshirt img{
     height: 130px;
 }
+.btn-remove-one{
+    all: unset;
+    width: 36px;
+    height: 38px;
+    text-align: center;
+    background-color: rgb(205, 2, 2);
+    color: rgb(249, 245, 240);
+    border-radius: 5px;
+}
+.btn-remove-one:hover{
+    background-color: rgb(166, 0, 0);
+    transition: ease all .4s;
+}
 .total-purchase{
     display: flex;
     flex-direction: column;
@@ -57,16 +71,77 @@
     align-items: center;
     padding: 35px 0;
     color: rgb(232, 232, 232);
+    font-size: 19px;
 }
-.btn-clear{
-    margin-top: 0px;
+.btn-clear-cart{
+    all: unset;
+    font-size: 16.5px;
+    margin-bottom: 10px;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    background-color: rgb(205, 2, 2);
+    color: rgb(249, 245, 240);
+    border-radius: 5px;
+}
+.btn-clear-cart:hover{
+    background-color: rgb(166, 0, 0);
+    transition: ease all .4s;
+}
+.btn-purchase{
+    all: unset;
     font-size: 18px;
     margin-bottom: 10px;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    background-color: rgb(2, 205, 134);
+    font-size: 15px;
+    color: rgb(249, 245, 240);
+    border-radius: 5px;
+}
+.btn-purchase:hover{
+    background-color: rgb(0, 175, 114);
+    transition: ease all .4s;
+}
+.confirm-purchase{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 50px;
+}
+.confirm-purchase > p{
+    color: black;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+.confirm-login-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 90px 0 30px 0;
+}
+.confirm-login-register > p{
+    color: black;
+    margin-top: 10px;
+}
+.confirm-login-register .btn-send{
+    margin: 20px;
+    padding: 5px 8px;
+}
+.confirm-login-register a{
+    text-decoration: none;
+}
+@media screen and (max-width: 960px) {
+    .container-cart{
+        height: calc(100vh - 65px);
+    }
 }
 @media screen and (max-width: 800px){
-    .container-cart{
-        min-height: 70vh;
-    }
     .cart-description{
         flex-direction: column;
     }

@@ -1,14 +1,16 @@
 import CategoriesSlider from '../CategoriesSlider/CategoriesSlider';
 import { SliderData } from '../CategoriesSlider/SliderData';
 import HeroSection from '../HeroSection/HeroSection';
-import PruebaFirestore from '../BestProducts/BestProducts';
+import BestProducts from '../BestProducts/BestProducts';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
     return (
         <div>
             <HeroSection />
             <CategoriesSlider slides={SliderData}/>
-            <PruebaFirestore />
+            <BestProducts />
+            <Footer />
         </div>
     )
 }

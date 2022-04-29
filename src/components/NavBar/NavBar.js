@@ -64,8 +64,14 @@ const NavBar = () => {
                  animate={{y: 0,opacity: 1}}
                  transition={{delay: .4, duration: 1.2, type:'spring', stiffness: 70}} 
                 >
-                 <Link to='/cart' onClick={closeMobileMenu}> <CartWidget /> </Link>
-                 { quantityItem() !== 0 && quantityItem() }
+                    <Link 
+                     to='/cart' 
+                     onClick={closeMobileMenu}
+                     className='cart-widget'
+                    > 
+                     <CartWidget /> 
+                    </Link>
+                     { quantityItem() !== 0 && quantityItem() }
                 </motion.div>
             </nav>
         </>

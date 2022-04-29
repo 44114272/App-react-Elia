@@ -1,4 +1,4 @@
-.opa{
+.container-best{
     background-color: rgb(241, 241, 241);
     width: 100%;
 }
@@ -13,7 +13,7 @@
     margin-top: 20px;
     font-family: 'Montserrat', sans-serif;
 }
-.container-best-products{
+.best-products{
     display: flex;
     margin-bottom: 60px;
 }
@@ -38,7 +38,7 @@
 .link{
    text-decoration: none; 
 }
-.container-best-products button{
+.best-products button{
     all: unset;
     background-color: rgb(25, 21, 21);
     width: 155px;
@@ -51,7 +51,7 @@
     cursor: pointer;
     border-radius: 10px;
 }
-.container-best-products button:hover{
+.best-products button:hover{
     background-color: rgb(6, 5, 5);
 }
 @media screen and (max-width: 960px){
@@ -65,7 +65,7 @@
     }
 }
 @media screen and (max-width: 757px){
-    .container-best-products{
+    .best-products{
         flex-direction: column;
         margin-top: 10px;
     }

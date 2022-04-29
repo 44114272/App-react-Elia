@@ -1,6 +1,7 @@
 import {useState,useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import { getFirestore } from '../../service/getFirestore';
+import LoadingAnimation from '../LoadingAnimation/LoadingAnimation';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
@@ -21,9 +22,8 @@ const ItemDetailContainer = () => {
 
     return (
         <div className='item-detail-container'>
-            { loading ? <div className="spinner-border text-secondary spinner-load" role="status">
-                                <span className="visually-hidden">Loading...</span>
-                            </div> : <ItemDetail productDetail={productDetail}/>
+            { loading ? <LoadingAnimation /> : 
+             <ItemDetail productDetail={productDetail}/>
             }
         </div>
     )

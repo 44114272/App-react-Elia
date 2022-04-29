@@ -1,7 +1,22 @@
-import {CgClose} from 'react-icons/cg'
+import {CgClose} from 'react-icons/cg';
+import { CartContext } from '../CartContext/CartContext';
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ModalReutilizable.css'
 
-const ModalReutilizable = ({children, state, changeState, title, showHeader}) => {
+const ModalReutilizable = ({children, state, changeState, title, showHeader, idOrder}) => {
+  const {clearCart} = useContext(CartContext);
+  const navigate = useNavigate();
+
+  const btnCerrarCart = () =>{
+    if(idOrder){
+      clearCart()
+      navigate('/welcome')
+    }else{
+      changeState(false)
+    }
+  }
+
   return (
     <>
       {state &&
@@ -14,7 +29,7 @@ const ModalReutilizable = ({children, state, changeState, title, showHeader}) =>
               }
               <button 
                 className='close-modal'
-                onClick={() => changeState(false)}
+                onClick={btnCerrarCart}
               >
                 <CgClose />
               </button>

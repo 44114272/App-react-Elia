@@ -11,7 +11,7 @@ const HeroSection = () => {
                  animate={{x: 0, opacity: 1}}
                  transition={{delay: .7,duration: .9}}
                 >
-                 Nunca es más fácil, simplemente te vuelves más rápido.
+                 Nunca es más fácil, simplemente te vuelves <span className='title-change'>más rápido</span>
                 </motion.h2>
                 <motion.button
                  initial={{y: 100, opacity: 0}}
