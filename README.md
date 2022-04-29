@@ -17,8 +17,6 @@ Esta tienda online se enfoca en ayudar a los ciclistas o cualquier persona inter
 | React-dom   	  | 17.0.2    | 	Renderización  |
 | React-router-dom| 6.0.2   | Navegación en el sitio    |
 | Firebase			  | 8.9.1     | Conexión con la base de datos |
-| React-bootstrap| 2.0.3     | Componentes|
-| Bootstrap        | 5.1.3      | Componentes y estilos|
-| Formik            | 2.2.9      | Validación de formularios  |
+| Framer-motion    | 6.2.8      | Animaciones  |
 | React-icons      | 4.3.1     | Iconos |
 
