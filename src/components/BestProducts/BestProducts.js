@@ -31,7 +31,7 @@ const PruebaFirestore = () => {
                                         alt={prod.description}
                                       />
                                       <h3 className='best-brand'>{prod.title}</h3>
-                                      <p className='best-desc'>La Ransom. Esta bicicleta de montaña para enduro pone en tus manos 170 mm de excelencia en ciclismo de montaña para machacar trail, ascender como un rayo, ganar etapas y pasar horas y horas a los pedales. La versión Tuned viene equipada con una horquilla FOX 38, nuestro sistema de suspensión TwinLoc, un grupo SRAM Eagle AXS y componentes de gama alta Syncros para que nada se interponga en tu camino, sea cual sea tu nivel.</p>
+                                      <p className='best-desc'>{prod.bigDescription}</p>
                                       <Link 
                                         to={`/detalle/${prod.id}`}
                                         className='link'
